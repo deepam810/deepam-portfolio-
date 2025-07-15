@@ -161,19 +161,10 @@
       <div class="card">🧠 Branding & Marketing</div>
       <div class="card">🖼️ Poster, Logo & Invite Design</div>
     </div>
-  </section>  <section class="projects" data-aos="fade-up">
-    <h3>Projects</h3>
-    <div class="grid-2">
-      <div class="card"><strong>Divyanshi AlkaFresh</strong><br>Alkaline water startup bringing pure hydration to life.</div>
-      <div class="card"><strong>RePlastX</strong><br>Plastic exchange-for-rewards model for sustainable recycling.</div>
-      <div class="card"><strong>SRXplore Internship Hub</strong><br>Helping 1st-year students access real opportunities.</div>
-      <div class="card"><strong>Emotional AI Video</strong><br>Voice, visuals & dreams combined to move hearts.</div>
-    </div>
   </section>  <section class="education" data-aos="fade-up">
     <h3>Education</h3>
     <div class="grid-2">
-      <div class="card"><strong>B.Tech in ECE</strong><br>JUT University | CGPA: 8.9</div>
-      <div class="card"><strong>BA in Economics</strong><br>RPS College, Harnaut</div>
+      <div class="card"><strong>B.Tech in ECE
       <div class="card"><strong>10th - 65%</strong><br>12th - 55%</div>
     </div>
   </section>  <section class="testimonials" data-aos="fade-up">
@@ -194,7 +185,4 @@
     </div>
   </section>  <footer>
     &copy; 2025 Deepam Kumar | Designed with ❤️ and powered by vision.
-  </footer>  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>  <script>
-    AOS.init({ duration: 1000 });
-  </script></body>
 </html>
