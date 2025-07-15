@@ -150,7 +150,7 @@
     </div>
   </section>  <section class="about" data-aos="fade-up">
     <h3>About Me</h3>
-    <p>I’m currently pursuing B.Tech in Electronics and Communication Engineering and a BA in Economics. I'm the founder of startups like Divyanshi AlkaFresh and RePlastX. I’m a dreamer, a doer, and a believer in making life better through design, tech, and grit. I dream of my Tata Harrier and building tools that change the world.</p>
+    <p>I’m currently pursuing B.Tech in Electronics and Communication Engineering </p>
   </section>  <section class="skills" data-aos="fade-up">
     <h3>Skills</h3>
     <div class="grid-2">
