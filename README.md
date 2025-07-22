@@ -1,188 +1,140 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deepam Kumar | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deepam Kumar - The Cinegineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Roboto', sans-serif;
     }
+
     body {
-      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
-      color: white;
-      overflow-x: hidden;
+      background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
+      background-size: 600% 600%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
     }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      text-align: center;
       padding: 2rem;
-      background-color: #121212;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     }
+
     header img {
-      height: 80px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+      animation: bounceIn 1s ease-out;
     }
-    header h1 {
-      font-size: 2rem;
-      color: #00ffc3;
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.3); opacity: 0; }
+      50% { transform: scale(1.1); opacity: 1; }
+      70% { transform: scale(0.9); }
+      100% { transform: scale(1); }
     }
-    section.hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 4rem 2rem;
-      position: relative;
-    }
-    section.hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('https://assets-global.website-files.com/5fa85d30d2f0111e7c270a1b/5fc65a3f2ed18b8be7f9f2dc_wave-haikei.svg') no-repeat center center/cover;
-      z-index: -1;
-      opacity: 0.1;
-    }
-    section.hero h2 {
+
+    h1 {
+      margin-top: 1rem;
       font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #00d8ff;
     }
-    section.hero p {
-      font-size: 1.2rem;
-      max-width: 800px;
-    }
-    .socials {
+
+    h2 {
       margin-top: 2rem;
-    }
-    .socials a {
-      margin: 0 1rem;
-      font-size: 1.8rem;
-      color: white;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .socials a:hover {
-      color: #00ffc3;
-    }
-    section {
-      padding: 4rem 2rem;
-    }
-    section h3 {
       font-size: 2rem;
-      margin-bottom: 1.5rem;
-      color: #00d8ff;
-      text-align: center;
+      border-bottom: 2px solid #fff;
+      display: inline-block;
+      padding-bottom: 0.5rem;
     }
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .card {
-      background-color: #222;
+
+    section {
       padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 0 20px rgba(0,255,195,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 25px rgba(0,255,195,0.3);
-    }
-    section.testimonials {
-      background: #181818;
-    }
-    .testimonial {
-      font-style: italic;
-      font-size: 1rem;
-      color: #ccc;
-      border-left: 4px solid #00ffc3;
-      padding-left: 1rem;
-    }
-    .resume {
       text-align: center;
-      margin-top: 2rem;
     }
-    .resume a {
-      background-color: #00d8ff;
-      padding: 0.8rem 2rem;
-      color: #000;
+
+    .skills, .contact {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .skill, .contact a {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .skill:hover, .contact a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
+
+    .contact a {
       text-decoration: none;
-      border-radius: 2rem;
+      color: #fff;
       font-weight: bold;
-      transition: background 0.3s;
     }
-    .resume a:hover {
-      background-color: #00ffc3;
-    }
+
     footer {
       text-align: center;
       padding: 2rem;
-      background-color: #111;
+      background-color: rgba(255,255,255,0.05);
       font-size: 0.9rem;
-      color: #ccc;
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="https://www.excelrs.xyz/images/1000246933.png" alt="Deepam Kumar" onerror="this.onerror=null;this.src='https://via.placeholder.com/150';">
     <h1>Deepam Kumar</h1>
-    <img src="https://www.excelrs.xyz/images/1000246933.png" alt="Deepam Kumar">
-  </header>  <section class="hero" data-aos="fade-up">
-    <h2>Creative Developer | Designer | Dreamer</h2>
-    <p>I am Deepam Kumar, a passionate individual with a vision to innovate and inspire. From engineering to design and beyond, I believe in turning ideas into reality with creativity and dedication.</p>
-    <div class="socials">
-      <a href="mailto:kdeepam59@gmail.com">📧</a>
-      <a href="https://www.linkedin.com/in/deepam-kumar-39332432b" target="_blank">💼</a>
-      <a href="https://www.instagram.com/deepam_810" target="_blank">📸</a>
+    <p>The Cinegineer 🎬⚙️</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>I am a student of Electronics & Communication Engineering with a deep passion for film direction and scriptwriting. My love for both technology and cinema defines me as 'The Cinegineer'.</p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Python</div>
+      <div class="skill">Video Editing</div>
+      <div class="skill">Script Writing</div>
+      <div class="skill">Direction</div>
+      <div class="skill">AI & ChatGPT</div>
     </div>
-  </section>  <section class="about" data-aos="fade-up">
-    <h3>About Me</h3>
-    <p>I’m currently pursuing B.Tech in Electronics and Communication Engineering </p>
-  </section>  <section class="skills" data-aos="fade-up">
-    <h3>Skills</h3>
-    <div class="grid-2">
-      <div class="card">💻 HTML, CSS, JavaScript</div>
-      <div class="card">🎨 UI/UX Design, Canva, Figma</div>
-      <div class="card">🤖 ChatGPT Prompt Engineering</div>
-      <div class="card">🚀 Startup Planning & Execution</div>
-      <div class="card">🧠 Branding & Marketing</div>
-      <div class="card">🖼️ Poster, Logo & Invite Design</div>
+  </section>
+
+  <section>
+    <h2>Connect With Me</h2>
+    <div class="contact">
+      <a href="mailto:kdeepam59@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/deepam-kumar-39332432b">LinkedIn</a>
+      <a href="https://www.instagram.com/deepam_810">Instagram</a>
     </div>
-  </section>  <section class="education" data-aos="fade-up">
-    <h3>Education</h3>
-    <div class="grid-2">
-      <div class="card"><strong>B.Tech in ECE
-      <div class="card"><strong>10th - 65%</strong><br>12th - 55%</div>
-    </div>
-  </section>  <section class="testimonials" data-aos="fade-up">
-    <h3>What People Say</h3>
-    <div class="grid-2">
-      <div class="testimonial">“Deepam’s ideas are innovative and full of passion.”</div>
-      <div class="testimonial">“His designs always feel fresh and meaningful.”</div>
-    </div>
-  </section>  <section class="contact" data-aos="fade-up">
-    <h3>Get In Touch</h3>
-    <p>
-      📧 kdeepam59@gmail.com <br>
-      📍 Harnaut, Nalanda, Bihar <br>
-      📱 DM me on Instagram: @deepam_810
-    </p>
-    <div class="resume">
-      <a href="#">📄 Download Resume</a>
-    </div>
-  </section>  <footer>
-    &copy; 2025 Deepam Kumar | Designed with ❤️ and powered by vision.
+  </section>
+
+  <footer>
+    © 2025 Deepam Kumar. All Rights Reserved.
+  </footer>
+</body>
 </html>
